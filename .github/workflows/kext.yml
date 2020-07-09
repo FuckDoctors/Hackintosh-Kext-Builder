@@ -34,11 +34,12 @@ jobs:
         for f in build/*.sh; do
           bash "$f" || break
         done
-    - name: Download Files
-      run: |
-        for f in download/*.sh; do
-          bash "$f" || break
-        done
+     # coding.net空间不足，不存稳定版了
+#    - name: Download Files
+#      run: |
+#        for f in download/*.sh; do
+#          bash "$f" || break
+#        done
     - name: Generate HTML
       run: |
         cd $GITHUB_WORKSPACE
